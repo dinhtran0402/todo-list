@@ -27,10 +27,12 @@ function Index(props) {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = (event) => {
     props.addTask(event);
+    reset();
     setTask(initialFormState);
   };
 
